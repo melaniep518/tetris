@@ -1,19 +1,27 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import {Tetrominos} from './components/grid.jsx';
 
-var HelloWorld = React.createClass({
+// *** IMPORT STORE ***
+import {store} from './store/store.js';
+
+// *** IMPORT GAME ***
+import {Grid} from './components/grid.jsx';
+
+var App = React.createClass({
   render: function() {
    return (
       <div>
-        <Tetrominos/>   
+        <Grid/>   
       </div>
     )
   }
 })
 
-ReactDOM.render(
-  <HelloWorld />,
+const render = () => ReactDOM.render(
+  <App/>,
   document.getElementById('root')
 );
+
+render();
+store.subscribe(render);

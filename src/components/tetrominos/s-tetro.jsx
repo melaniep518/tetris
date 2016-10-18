@@ -24,8 +24,6 @@ const S = React.createClass({
     })
 
 
-    console.log(squares);
-
 // ***Returns collection of squares as a shape (wrapped in a g tag)
     return (
       <g transform={transformString} fill={this.props.color}>
