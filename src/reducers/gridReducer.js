@@ -6,7 +6,7 @@ import {RENDER_TETRO} from '../actions/renderTetro.js';
 // NOT SURE HOW I SHOULD SET UP MY INITIAL STATE...
 
 const _initialState = {
-  currentTetro: null
+  currentTetro: []
 };
 
 // ********************* RETRIEVES A RANDOM TETROMINO FROM THE TETROS ARRAT (PASSED IN AS DATA FROM RENDER TETRO ACTION) *********************
