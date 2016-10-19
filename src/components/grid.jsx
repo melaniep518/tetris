@@ -55,7 +55,9 @@ const Grid = React.createClass({
       <div>
         <h1>Hello World!</h1>
         <svg height="500" width="450" style={style}>
-          <S x="1" y="1" color="SpringGreen"/>  
+          {store.getState().currentTetro.map(function(val, idx) {
+            return
+          })}
         </svg>
       </div>
     )
