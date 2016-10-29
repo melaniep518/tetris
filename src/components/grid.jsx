@@ -60,7 +60,7 @@ const Grid = React.createClass({
           <I/>
           <O/>
           <T/>
-          <Z x="1" y="15" color="red"/>
+          <Z/>
           <J/>
           <L/>        
         </svg>
