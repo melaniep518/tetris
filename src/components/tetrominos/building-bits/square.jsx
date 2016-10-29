@@ -1,6 +1,7 @@
 import React from 'react';
 
-// Creates individual squares that we can use to build our tetrominos
+// *******************************************************************************************************************************************
+// Most basic building block for tetrominos--creates individual squares that we can use to build our tetrominos
 
 const Square = React.createClass({
   render: function() {

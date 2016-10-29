@@ -14,6 +14,9 @@ const _initialState = {
 function gridReducer(currentState = _initialState, action) {
   switch(action.type) {
     case RENDER_TETRO:
+      
+// *****RANDOMIZE WITHIN THE ACTION NOT THE REDUCER
+
       function renderRandomTetro(array) {
         let tetroArrayCopy = [...array];
         let randomIdx = Math.floor(Math.random()*tetroArrayCopy.length);
@@ -24,7 +27,7 @@ function gridReducer(currentState = _initialState, action) {
       return (
         console.log('TETROS ARRAY:',  renderRandomTetro(action.data)),
         {
-          currentTetro: action.data
+          currentTetro: renderRandomTetro(action.data)
         }
       )
     default:

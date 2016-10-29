@@ -11,21 +11,20 @@ import {renderTetro} from '../actions/renderTetro.js';
 
 
 // ********************* IMPORT TETROMINOS *********************
-import {S} from './tetrominos/s-tetro.jsx';
-// import {I} from './tetrominos/i-tetro.jsx';
-// import {O} from './tetrominos/o-tetro.jsx';
-// import {T} from './tetrominos/t-tetro.jsx';
-// import {Z} from './tetrominos/z-tetro.jsx';
-// import {J} from './tetrominos/j-tetro.jsx';
-// import {L} from './tetrominos/l-tetro.jsx';
+import {S} from './tetrominos/tetros/s-tetro.jsx';
+import {I} from './tetrominos/tetros/i-tetro.jsx';
+import {O} from './tetrominos/tetros/o-tetro.jsx';
+import {T} from './tetrominos/tetros/t-tetro.jsx';
+import {Z} from './tetrominos/tetros/z-tetro.jsx';
+import {J} from './tetrominos/tetros/j-tetro.jsx';
+import {L} from './tetrominos/tetros/l-tetro.jsx';
 
-
-// ********************* THIS IS WHERE I WILL RENDER THE GRID *********************
-
+// ********************* SCALE *********************
 const gridSize = 20;
 
-const Grid = React.createClass({
+// ****************************************** THIS IS WHERE I WILL RENDER THE GRID ******************************************
 
+const Grid = React.createClass({
 
   test: function() {
     console.log('test');
@@ -51,11 +50,19 @@ const Grid = React.createClass({
       backgroundColor: "#eee"
     }
 
+// WIDTH & HEIGHT have been scaled to "gridSize" by multiplying the dimensions (10w x 20h)
+    
     return (
       <div>
         <h1>Hello World!</h1>
-        <svg height="500" width="450" style={style}>
-          <S x="1" y="1" color="SpringGreen"/>  
+        <svg width="200px" height="400px" style={style}>
+          <S/>
+          <I/>
+          <O/>
+          <T/>
+          <Z x="1" y="15" color="red"/>
+          <J/>
+          <L/>        
         </svg>
       </div>
     )
