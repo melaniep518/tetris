@@ -1,5 +1,6 @@
 // ********************* IMPORT NPM MODULES *********************
 import React from 'react';
+import {Provider} from 'react-redux';
 
 
 // ********************* IMPORT STORE *********************
@@ -11,13 +12,8 @@ import {renderTetro} from '../actions/renderTetro.js';
 
 
 // ********************* IMPORT TETROMINOS *********************
-import {S} from './tetrominos/tetros/s-tetro.jsx';
-import {I} from './tetrominos/tetros/i-tetro.jsx';
-import {O} from './tetrominos/tetros/o-tetro.jsx';
-import {T} from './tetrominos/tetros/t-tetro.jsx';
-import {Z} from './tetrominos/tetros/z-tetro.jsx';
-import {J} from './tetrominos/tetros/j-tetro.jsx';
-import {L} from './tetrominos/tetros/l-tetro.jsx';
+import {CurrentTetro} from './tetrominos/tetros/currentTetro.jsx';
+import {TetroContainer} from './containers/tetroContainer.js';
 
 // ********************* SCALE *********************
 const gridSize = 20;
@@ -56,13 +52,9 @@ const Grid = React.createClass({
       <div>
         <h1>Hello World!</h1>
         <svg width="200px" height="400px" style={style}>
-          <S/>
-          <I/>
-          <O/>
-          <T/>
-          <Z/>
-          <J/>
-          <L/>        
+          <Provider store={store}>
+            <TetroContainer/>   
+          </Provider>   
         </svg>
       </div>
     )

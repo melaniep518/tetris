@@ -1,5 +1,3 @@
-
-
 export const RENDER_TETRO = "RENDER_TETRO";
 
 export function renderTetro () {

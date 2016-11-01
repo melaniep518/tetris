@@ -1,10 +1,10 @@
 import {combineReducers} from 'redux';
 
 // *** IMPORT REDUCERS ***
-import {gridReducer} from './gridReducer.js';
+import {currentTetReducer} from './currentTetReducer.js';
 
 const rootReducer = combineReducers({
-  gridReducer
+  currentTetReducer
 })
 
 export {rootReducer};
