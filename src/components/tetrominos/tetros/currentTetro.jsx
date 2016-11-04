@@ -14,6 +14,7 @@ export const CurrentTetro = React.createClass({
   render: function() {
     console.log(this.props)
     const gridSize = 20;
+    // this.props.x & this.props.y returning undefined
     let transform = "scale(" + gridSize + " " + gridSize + ") translate(" + this.props.x + " " + this.props.y + ")";
     
     return (

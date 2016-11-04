@@ -1,6 +1,5 @@
 // ********************* IMPORT NPM MODULES *********************
 import React from 'react';
-import {Provider} from 'react-redux';
 
 
 // ********************* IMPORT STORE *********************
@@ -52,9 +51,7 @@ const Grid = React.createClass({
       <div>
         <h1>Hello World!</h1>
         <svg width="200px" height="400px" style={style}>
-          <Provider store={store}>
             <TetroContainer/>   
-          </Provider>   
         </svg>
       </div>
     )
