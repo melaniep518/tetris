@@ -1,6 +1,5 @@
 // ********************* IMPORT ACTIONS *********************
-import {MOVE_LEFT} from '../actions/types.js';
-import {MOVE_RIGHT} from '../actions/types.js';
+import {MOVE_LEFT, MOVE_RIGHT, SOFT_DROP} from '../actions/types.js';
 
 const _initialCoordinates =  {
   x: 0,
@@ -19,6 +18,11 @@ function currentTetReducer(currentCoordinates = _initialCoordinates, action) {
     case MOVE_RIGHT: 
       coordinatesCopy.x += 1;
       return coordinatesCopy;
+
+    case SOFT_DROP:
+      coordinatesCopy.y += 1;
+      return coordinatesCopy;
+
     default:
       return coordinatesCopy;
   }

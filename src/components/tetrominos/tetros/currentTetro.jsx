@@ -2,8 +2,11 @@
 import React from 'react';
 import Mousetrap from 'mousetrap';
 
+// ***************************************** ACTION TYPES ***************************************** 
 import moveLeft from '../../../actions/moveLeft.js';
 import moveRight from '../../../actions/moveRight.js';
+import softDrop from '../../../actions/softDrop.js';
+
 // *****************************************IMPORT TETROMINOS *****************************************
 import {S} from './s-tetro.jsx';
 // import {I} from './tetrominos/tetros/i-tetro.jsx';
@@ -17,6 +20,7 @@ export const CurrentTetro = React.createClass({
   componentDidMount: function() {
     Mousetrap.bind('left', moveLeft);
     Mousetrap.bind('right', moveRight);
+    Mousetrap.bind('down', softDrop);
   },
   
 
