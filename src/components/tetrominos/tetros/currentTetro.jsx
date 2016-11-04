@@ -1,6 +1,9 @@
 // ***************************************** IMPORT NPM DEPENDENCIES ***************************************** 
 import React from 'react';
+import Mousetrap from 'mousetrap';
 
+import moveLeft from '../../../actions/moveLeft.js';
+import moveRight from '../../../actions/moveRight.js';
 // *****************************************IMPORT TETROMINOS *****************************************
 import {S} from './s-tetro.jsx';
 // import {I} from './tetrominos/tetros/i-tetro.jsx';
@@ -10,13 +13,18 @@ import {S} from './s-tetro.jsx';
 // import {J} from './tetrominos/tetros/j-tetro.jsx';
 // import {L} from './tetrominos/tetros/l-tetro.jsx';
 
-export const CurrentTetro = React.createClass({
+export const CurrentTetro = React.createClass({ 
+  componentDidMount: function() {
+    Mousetrap.bind('left', moveLeft);
+    Mousetrap.bind('right', moveRight);
+  },
+  
+
   render: function() {
-    console.log(this.props)
+    // console.log(this.props)
     const gridSize = 20;
-    // this.props.x & this.props.y returning undefined
     let transform = "scale(" + gridSize + " " + gridSize + ") translate(" + this.props.x + " " + this.props.y + ")";
-    
+
     return (
       <g transform={transform}>
         <S/>
