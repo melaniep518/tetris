@@ -3,7 +3,7 @@ import React from 'react';
 
 // ***************************************** IMPORT COMPONENTS *****************************************
 import {Square} from './square.jsx';
-import {gridSize} from '../../grid.jsx';
+
 
 // TETROMINO BUILDER -- generic; uses 2D array provided through props to build tetrominos; 
 export const Tetromino = React.createClass({

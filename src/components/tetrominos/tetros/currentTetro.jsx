@@ -6,6 +6,7 @@ import Mousetrap from 'mousetrap';
 import moveLeft from '../../../actions/moveLeft.js';
 import moveRight from '../../../actions/moveRight.js';
 import softDrop from '../../../actions/softDrop.js';
+import rotate from '../../../actions/rotate.js';
 
 // *****************************************IMPORT TETROMINOS *****************************************
 import {S} from './s-tetro.jsx';
@@ -21,13 +22,13 @@ export const CurrentTetro = React.createClass({
     Mousetrap.bind('left', moveLeft);
     Mousetrap.bind('right', moveRight);
     Mousetrap.bind('down', softDrop);
+    Mousetrap.bind('up', rotate);
   },
   
 
   render: function() {
     // console.log(this.props)
-    const gridSize = 20;
-    let transform = "scale(" + gridSize + " " + gridSize + ") translate(" + this.props.x + " " + this.props.y + ")";
+    let transform = "scale(" + this.props.gridSize + " " + this.props.gridSize + ") translate(" + this.props.x + " " + this.props.y + ") rotate(" + this.props.angle + ")";
 
     return (
       <g transform={transform}>

@@ -1,15 +1,8 @@
 // ********************* IMPORT NPM MODULES *********************
 import React from 'react';
-import Mousetrap from 'mousetrap';
-
-// ********************* IMPORT STORE *********************
-import {store} from '../store/store.js';
 
 // ********************* IMPORT TETROMINOS *********************
 import {TetroContainer} from './containers/tetroContainer.js';
-
-// ********************* SCALE *********************
-const gridSize = 20;
 
 // ********************* RENDER GAME GRID *********************
 const Grid = React.createClass({
@@ -24,11 +17,11 @@ const Grid = React.createClass({
       <div>
         <h1>Hello World!</h1>
         <svg width="200px" height="400px" style={style}>
-            <TetroContainer/>   
+            <TetroContainer gridSize="20" />   
         </svg>
       </div>
     )
   }
 })
 
-export {Grid, gridSize};
+export {Grid};

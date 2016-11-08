@@ -4,7 +4,8 @@ import {CurrentTetro} from '../tetrominos/tetros/currentTetro.jsx';
 
 const mapStateToProps = state => ({
   x: state.currentTetReducer.x,
-  y: state.currentTetReducer.y
+  y: state.currentTetReducer.y,
+  angle: state.currentTetReducer.angle  
 })
 
 
