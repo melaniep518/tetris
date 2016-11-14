@@ -10,12 +10,13 @@ import rotate from '../../../actions/rotate.js';
 
 // *****************************************IMPORT TETROMINOS *****************************************
 import {S} from './s-tetro.jsx';
-// import {I} from './tetrominos/tetros/i-tetro.jsx';
-// import {O} from './tetrominos/tetros/o-tetro.jsx';
-// import {T} from './tetrominos/tetros/t-tetro.jsx';
-// import {Z} from './tetrominos/tetros/z-tetro.jsx';
-// import {J} from './tetrominos/tetros/j-tetro.jsx';
-// import {L} from './tetrominos/tetros/l-tetro.jsx';
+// import {I} from './i-tetro.jsx';
+// import {O} from './o-tetro.jsx';
+// import {T} from './t-tetro.jsx';
+// import {Z} from './z-tetro.jsx';
+// import {J} from './j-tetro.jsx';
+// import {L} from './l-tetro.jsx';
+
 
 export const CurrentTetro = React.createClass({ 
   componentDidMount: function() {
@@ -30,6 +31,7 @@ export const CurrentTetro = React.createClass({
     // console.log(this.props)
     let transform = "scale(" + this.props.gridSize + " " + this.props.gridSize + ") translate(" + this.props.x + " " + this.props.y + ") rotate(" + this.props.angle + ")";
 
+// *********** THIS NEEDS TO RECIEVE A DYNAMIC COMPONENT
     return (
       <g transform={transform}>
         <S/>
